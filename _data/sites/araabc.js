@@ -1,8 +1,9 @@
 module.exports = {
-	name: "Ara's Projects", // optional, falls back to object key
-	description: "My projects",
+	description: "Ara's projects",
+	skip: !process.env.CONTEXT || process.env.SITE_NAME !== "speedlify",
 	options: {
 		frequency: 60 * 23, // (in minutes), 23 hours
+		freshChrome: "run",
 	},
 	urls: [
 		"https://www.itsmeara.com/",
